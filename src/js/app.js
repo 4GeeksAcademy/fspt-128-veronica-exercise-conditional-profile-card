@@ -33,14 +33,14 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name == null ? "amparo" : variables.name}${
+          <h1>${variables.name == null ? "amparo " : variables.name} ${
     variables.lastName == null ? " persianas" : variables.lastName
   }</h1>
           <h2>${variables.role == null ? "web developer" : variables.role}</h2>
           <h3>${variables.country == null ? "toledo ," : variables.country}${
     variables.city == null ? "españa" : variables.city
   }</h3>
-          <ul class="position-right">
+          <ul class=${variables.socialMediaPosition}>
     
             <li><a href="${
               variables.twitter
@@ -61,7 +61,7 @@ function render(variables = {}) {
         </div>
     `;
 }
-// condicion? sisecumple loque queremos que reorne :
+// condicion? sisecumple loque queremos que retorne :
 // variables.name == null? "amparo" :dos caminos ${variables.name}
 
 /**
